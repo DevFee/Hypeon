@@ -1,0 +1,121 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.navactive > ul {
+  -webkit-clip-path: circle(1500px at 90% -20%);
+          clip-path: circle(1500px at 90% -20%);
+  pointer-events: all;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem;
+  flex-flow: wrap;
+  -webkit-backdrop-filter: blur(20px);
+          backdrop-filter: blur(20px);
+  width: 100%;
+  gap: 1.5rem;
+}
+header .titlebox h1 a {
+  font-style: italic;
+  background-image: linear-gradient(to right, #ff00d9, #9932CC);
+  -webkit-background-clip: text;
+  background-clip: text;
+  font-weight: 400;
+  color: transparent;
+  text-decoration: none;
+}
+header nav .hamburguer {
+  display: none;
+  border: none;
+  background: none;
+  border-top: 3px solid white;
+  cursor: pointer;
+}
+header nav .hamburguer::after, header nav .hamburguer::before {
+  content: "";
+  display: block;
+  width: 30px;
+  height: 3px;
+  background: #fff;
+  margin-top: 5px;
+}
+header nav ul {
+  transition: all 0.6s;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 2rem;
+}
+header nav ul li {
+  list-style: none;
+}
+header nav ul li a {
+  transition: all 0.5s;
+  color: rgb(240, 240, 240);
+  position: relative;
+  text-decoration: none;
+  padding: 0.5rem 3rem;
+  border-radius: 0.4rem;
+}
+header nav ul li a::after {
+  content: "";
+  transition: all 0.43s;
+  background: white;
+  width: 0px;
+  height: 1px;
+  position: absolute;
+  display: block;
+  top: 100%;
+}
+header nav ul li a:hover {
+  color: #ff00d9;
+}
+header nav ul li a:hover::after {
+  width: 100%;
+  background: #ff00d9;
+}
+
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 22px;
+  }
+  header nav .hamburguer {
+    display: block;
+  }
+  header nav ul {
+    position: fixed;
+    top: 0;
+    z-index: -1;
+    left: 0;
+    width: 100vw;
+    gap: 0;
+    -webkit-clip-path: circle(100px at 105% -20%);
+            clip-path: circle(100px at 105% -20%);
+    height: 100vh;
+    flex-direction: column;
+    background: rgb(35, 35, 35);
+    pointer-events: none;
+  }
+  header nav ul li a {
+    font-size: 15px;
+  }
+}
+@media (max-width: 387px) {
+  header h1 {
+    font-size: 20px;
+  }
+  header nav .hamburguer {
+    width: 25px;
+  }
+  header nav .hamburguer::after, header nav .hamburguer::before {
+    width: 25px;
+  }
+}/*# sourceMappingURL=header.module.css.map */
