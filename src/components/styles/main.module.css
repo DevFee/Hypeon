@@ -9,7 +9,6 @@ main {
   justify-content: center;
   align-items: center;
   position: relative;
-  z-index: -1;
   flex-direction: column;
   animation: alternate infinite MoverBc 30s ease-in-out;
 }
@@ -27,6 +26,38 @@ main h3 {
   font-weight: 300;
   position: relative;
 }
+main a {
+  margin-top: 5vh;
+  padding: 0.8rem 3rem;
+  overflow: hidden;
+  z-index: 0;
+  background: #9932CC;
+  border-radius: 2rem;
+  color: White;
+  cursor: pointer;
+  text-decoration: none;
+  position: relative;
+  transition: all 0.5s;
+}
+main a::after {
+  content: "";
+  z-index: -1;
+  display: block;
+  top: 0%;
+  transform: translate(130deg);
+  left: 0%;
+  width: 0%;
+  height: 100%;
+  transition: all 0.5s;
+  background: rgb(255, 255, 255);
+  position: absolute;
+}
+main a:hover {
+  color: black;
+}
+main a:hover::after {
+  width: 100%;
+}
 
 @media (max-width: 768px) {
   h1 {
@@ -34,6 +65,9 @@ main h3 {
   }
   h3 {
     font-size: 14px;
+  }
+  a {
+    font-size: 15px;
   }
 }
 @media (max-width: 387px) {
@@ -43,6 +77,10 @@ main h3 {
   main h3 {
     font-size: 12px;
   }
+  main a {
+    font-size: 12px;
+    padding: 0.8rem 1.5rem;
+  }
 }
 @media (max-width: 320px) {
   main h1 {
@@ -50,6 +88,10 @@ main h3 {
   }
   main h3 {
     font-size: 10px;
+  }
+  main a {
+    font-size: 10px;
+    padding: 0.8rem;
   }
 }
 @keyframes MoverBc {

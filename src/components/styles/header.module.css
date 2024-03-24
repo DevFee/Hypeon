@@ -22,13 +22,14 @@ header {
           backdrop-filter: blur(20px);
   width: 100%;
   gap: 1.5rem;
+  z-index: 1;
 }
 header .titlebox h1 a {
   font-style: italic;
   background-image: linear-gradient(to right, #ff00d9, #9932CC);
   -webkit-background-clip: text;
   background-clip: text;
-  font-weight: 400;
+  font-weight: 600;
   color: transparent;
   text-decoration: none;
 }
@@ -53,6 +54,18 @@ header nav ul {
   align-items: center;
   justify-content: space-evenly;
   gap: 2rem;
+}
+header nav ul .register a {
+  transition: all 0.5s;
+  background: #9932CC;
+}
+header nav ul .register a::after {
+  content: "";
+  display: none;
+}
+header nav ul .register a:hover {
+  color: white;
+  background: #ff00d9;
 }
 header nav ul li {
   list-style: none;
@@ -84,7 +97,7 @@ header nav ul li a:hover::after {
 }
 
 @media (max-width: 768px) {
-  header h1 {
+  header h1 a {
     font-size: 22px;
   }
   header nav .hamburguer {
@@ -103,9 +116,10 @@ header nav ul li a:hover::after {
     flex-direction: column;
     background: rgb(35, 35, 35);
     pointer-events: none;
+    flex-direction: column-reverse;
   }
   header nav ul li a {
-    font-size: 15px;
+    font-size: 18px;
   }
 }
 @media (max-width: 387px) {
