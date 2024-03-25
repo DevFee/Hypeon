@@ -6,8 +6,7 @@ $pc2: #ff00d9;
     color: $pctext;
 }
 
-main{
-    visibility: hidden;
+.MainHomePage{
     height: 100vh;
     background: url('/src/assets/Frame\ 1\ \(8\).png');
     display: flex;
@@ -15,10 +14,7 @@ main{
     align-items: center;
     position: relative;
     flex-direction: column;
-    animation: alternate infinite MoverBc 30s ease-in-out;
-    #main{
-        visibility: hidden;
-    }
+    animation: alternate infinite MoverBc 15s ease-in-out;
     h1{
         color: $pc1;
         font-family: "inter", sans-serif;
@@ -43,6 +39,7 @@ main{
         text-decoration: none;
         position: relative;
         transition: all 0.5s;
+        animation: alternate infinite 1s scaleTransform;
         &::after{
             content: '';
             z-index: -1;
@@ -115,5 +112,14 @@ main{
     }
     to{
         background-position: 100% 0%;
+    }
+}
+
+@keyframes scaleTransform{
+    from{
+        transform: scale(0.95);
+    }
+    to{
+        transform: scale(1.0);
     }
 }

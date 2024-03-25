@@ -1,0 +1,186 @@
+.containerLogin {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  background: url("/src/assets/Frame 1 (8).png");
+  background-size: cover;
+  justify-content: space-around;
+  align-items: center;
+}
+.containerLogin .div1Login {
+  height: 100vh;
+  width: 50vw;
+  flex: 50%;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.22);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  background: rgb(32, 32, 32);
+}
+.containerLogin .div1Login form {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.containerLogin .div1Login form input {
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid white;
+  transition: all 0.5s;
+  outline: none;
+  color: rgb(240, 240, 240);
+  font-size: 15px;
+  padding: 0.3rem;
+}
+.containerLogin .div1Login form input:focus {
+  border-bottom: 1px solid #9932CC;
+}
+.containerLogin .div1Login form button {
+  background: transparent;
+  border: 1px solid white;
+  color: rgb(240, 240, 240);
+  padding: 1rem;
+  position: relative;
+  cursor: pointer;
+  transition: all 0.4s;
+}
+.containerLogin .div1Login form button::after {
+  content: "";
+  background: white;
+  display: block;
+  width: 0%;
+  top: 0;
+  left: 0;
+  transition: all 0.4s;
+  height: 100%;
+  position: absolute;
+  z-index: -1;
+}
+.containerLogin .div1Login form button:hover {
+  color: black;
+}
+.containerLogin .div1Login form button:hover::after {
+  width: 100%;
+}
+.containerLogin div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 50;
+  gap: 1rem;
+}
+.containerLogin div a {
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .containerLogin {
+    justify-content: space-around;
+  }
+  .containerLogin .div1Login {
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+  }
+  .containerLogin .div1Login h1 {
+    font-size: 28px;
+  }
+  .containerLogin .div1Login form input {
+    font-size: 14px;
+  }
+  .containerLogin .div1Login form button {
+    position: relative;
+  }
+}
+@media (max-width: 425px) {
+  .containerLogin {
+    justify-content: space-around;
+  }
+  .containerLogin .div1Login {
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+  }
+  .containerLogin .div1Login h1 {
+    font-size: 22px;
+  }
+  .containerLogin .div1Login form {
+    font-size: 18px;
+  }
+  .containerLogin .div1Login form input {
+    font-size: 12px;
+  }
+  .containerLogin .div1Login form button {
+    position: relative;
+  }
+  .containerLogin div h1 {
+    font-size: 18px;
+  }
+  .containerLogin div a {
+    font-size: 14px;
+  }
+}
+@media (max-width: 375px) {
+  .containerLogin {
+    justify-content: space-around;
+  }
+  .containerLogin .div1Login {
+    height: 100vh;
+    flex: 50%;
+    justify-content: center;
+    align-items: center;
+  }
+  .containerLogin .div1Login h1 {
+    font-size: 18px;
+  }
+  .containerLogin .div1Login form input {
+    font-size: 11px;
+  }
+  .containerLogin .div1Login form button {
+    position: relative;
+    font-size: 12px;
+  }
+  .containerLogin div {
+    gap: 0;
+  }
+  .containerLogin div h1 {
+    font-size: 16px;
+  }
+  .containerLogin div a {
+    font-size: 12px;
+  }
+}
+@media (max-width: 320px) {
+  .containerLogin {
+    justify-content: space-around;
+  }
+  .containerLogin .div1Login {
+    height: 100vh;
+    flex: 50%;
+    justify-content: center;
+    align-items: center;
+  }
+  .containerLogin .div1Login h1 {
+    font-size: 18px;
+  }
+  .containerLogin .div1Login form input {
+    font-size: 10px;
+  }
+  .containerLogin .div1Login form button {
+    position: relative;
+    font-size: 10px;
+  }
+  .containerLogin div {
+    gap: 0;
+  }
+  .containerLogin div h1 {
+    font-size: 16px;
+  }
+  .containerLogin div a {
+    font-size: 12px;
+  }
+}/*# sourceMappingURL=login.module.css.map */

@@ -2,7 +2,7 @@
   color: rgb(240, 240, 240);
 }
 
-main {
+.MainHomePage {
   height: 100vh;
   background: url("/src/assets/Frame 1 (8).png");
   display: flex;
@@ -10,23 +10,20 @@ main {
   align-items: center;
   position: relative;
   flex-direction: column;
-  animation: alternate infinite MoverBc 30s ease-in-out;
+  animation: alternate infinite MoverBc 15s ease-in-out;
 }
-main #main {
-  visibility: hidden;
-}
-main h1 {
+.MainHomePage h1 {
   color: #9932CC;
   font-family: "inter", sans-serif;
   font-weight: 900;
   text-shadow: 0 0.3rem 1rem rgba(0, 0, 0, 0.609);
 }
-main h3 {
+.MainHomePage h3 {
   font-family: "roboto", sans-serif;
   font-weight: 300;
   position: relative;
 }
-main a {
+.MainHomePage a {
   margin-top: 5vh;
   padding: 0.8rem 3rem;
   overflow: hidden;
@@ -38,8 +35,9 @@ main a {
   text-decoration: none;
   position: relative;
   transition: all 0.5s;
+  animation: alternate infinite 1s scaleTransform;
 }
-main a::after {
+.MainHomePage a::after {
   content: "";
   z-index: -1;
   display: block;
@@ -52,10 +50,10 @@ main a::after {
   background: rgb(255, 255, 255);
   position: absolute;
 }
-main a:hover {
+.MainHomePage a:hover {
   color: black;
 }
-main a:hover::after {
+.MainHomePage a:hover::after {
   width: 100%;
 }
 
@@ -100,5 +98,13 @@ main a:hover::after {
   }
   to {
     background-position: 100% 0%;
+  }
+}
+@keyframes scaleTransform {
+  from {
+    transform: scale(0.95);
+  }
+  to {
+    transform: scale(1);
   }
 }/*# sourceMappingURL=main.module.css.map */

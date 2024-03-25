@@ -1,0 +1,202 @@
+$pctext: rgb(240, 240, 240);
+$pc1: #9932CC;
+$pc2: #ff00d9;
+
+.containerLogin{
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    background: url('/src/assets/Frame\ 1\ \(8\).png');
+    background-size: cover;
+    justify-content: space-around;
+    align-items: center;
+    .div1Login{
+        height: 100vh;
+        width: 50vw;
+        flex: 50%;
+        display: flex;
+        flex-direction: column;
+        box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.22);
+        backdrop-filter: blur(10px);
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+        background: rgb(32, 32, 32);
+        form{
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            input{
+                background: transparent;
+                border: none;
+                border-bottom: 1px solid white;
+                transition: all 0.5s;
+                outline: none;
+                color: $pctext;
+                font-size: 15px; 
+                padding: 0.3rem;
+                &:focus{
+                    border-bottom: 1px solid $pc1;
+                }
+            }
+            button{
+                background: transparent;
+                border: 1px solid white;
+                color: $pctext;
+                padding: 1rem;
+                position: relative;
+                cursor: pointer;
+                transition: all 0.4s;
+                &::after{
+                    content: '';
+                    background: white;
+                    display: block;
+                    width: 0%;
+                    top: 0;
+                    left: 0;
+                    transition: all 0.4s;
+                    height: 100%;
+                    position: absolute;
+                    z-index: -1;
+                }
+                &:hover{
+                    color: black;
+                    &::after{
+                        width: 100%;
+                    }
+                }
+            }
+        }
+
+    }
+    div{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        flex: 50;
+        gap: 1rem;
+        a{
+            color: white;
+        }
+    }
+}
+
+@media (max-width: 768px){
+    .containerLogin{
+        justify-content: space-around;
+        .div1Login{
+            height: 100vh;
+            justify-content: center;
+            align-items: center;
+            h1{
+                font-size: 28px;
+            }
+            form{
+                input{
+                    font-size: 14px;
+                }
+                button{
+                    position: relative;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 425px){
+    .containerLogin{
+        justify-content: space-around;
+        .div1Login{
+            height: 100vh;
+            justify-content: center;
+            align-items: center;
+            h1{
+                font-size: 22px;
+            }
+            form{
+                font-size: 18px;
+                input{
+                    font-size: 12px;
+                }
+                button{
+                    position: relative;
+                }
+            }
+        }
+        div{
+            h1{
+                font-size: 18px;
+                
+            }
+            a{
+                font-size: 14px;
+            }
+        }
+    }
+}
+
+@media (max-width: 375px){
+    .containerLogin{
+        justify-content: space-around;
+        .div1Login{
+            height: 100vh;
+            flex: 50%;
+            justify-content: center;
+            align-items: center;
+            h1{
+                font-size: 18px;
+            }
+            form{
+                input{
+                    font-size: 11px;
+                }
+                button{
+                    position: relative;
+                    font-size: 12px;
+                }
+            }
+        }
+        div{
+            gap: 0;
+            h1{
+                font-size: 16px;
+            }
+            a{
+                font-size: 12px;
+            }
+        }
+    }
+}
+
+@media (max-width: 320px){
+    .containerLogin{
+        justify-content: space-around;
+        .div1Login{
+            height: 100vh;
+            flex: 50%;
+            justify-content: center;
+            align-items: center;
+            h1{
+                font-size: 18px;
+            }
+            form{
+                input{
+                    font-size: 10px;
+                }
+                button{
+                    position: relative;
+                    font-size: 10px;
+                }
+            }
+        }
+        div{
+            gap: 0;
+            h1{
+                font-size: 16px;
+            }
+            a{
+                font-size: 12px;
+            }
+        }
+    }
+}

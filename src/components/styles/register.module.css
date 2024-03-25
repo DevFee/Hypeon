@@ -1,0 +1,181 @@
+.containerRegister {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  background: url("/src/assets/Frame 1 (8).png");
+  background-size: cover;
+  justify-content: space-around;
+  align-items: center;
+}
+.containerRegister .div1Register {
+  height: 100vh;
+  width: 50vw;
+  flex: 50%;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.22);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  background: rgb(32, 32, 32);
+}
+.containerRegister .div1Register form {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.containerRegister .div1Register form input {
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid white;
+  transition: all 0.5s;
+  outline: none;
+  color: rgb(240, 240, 240);
+  font-size: 15px;
+  padding: 0.3rem;
+}
+.containerRegister .div1Register form input:focus {
+  border-bottom: 1px solid #9932CC;
+}
+.containerRegister .div1Register form button {
+  background: transparent;
+  border: 1px solid white;
+  color: rgb(240, 240, 240);
+  padding: 1rem;
+  position: relative;
+  cursor: pointer;
+  transition: all 0.4s;
+}
+.containerRegister .div1Register form button::after {
+  content: "";
+  background: white;
+  display: block;
+  width: 0%;
+  top: 0;
+  left: 0;
+  transition: all 0.4s;
+  height: 100%;
+  position: absolute;
+  z-index: -1;
+}
+.containerRegister .div1Register form button:hover {
+  color: black;
+}
+.containerRegister .div1Register form button:hover::after {
+  width: 100%;
+}
+.containerRegister div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  flex: 50%;
+}
+.containerRegister div a {
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .containerRegister {
+    justify-content: space-around;
+  }
+  .containerRegister .div1Register h1 {
+    font-size: 28px;
+  }
+  .containerRegister .div1Register form input {
+    font-size: 14px;
+  }
+  .containerRegister .div1Register form button {
+    position: relative;
+  }
+}
+@media (max-width: 425px) {
+  .containerRegister {
+    justify-content: space-around;
+  }
+  .containerRegister .div1Register {
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+  }
+  .containerRegister .div1Register h1 {
+    font-size: 22px;
+  }
+  .containerRegister .div1Register form {
+    font-size: 18px;
+  }
+  .containerRegister .div1Register form input {
+    font-size: 12px;
+  }
+  .containerRegister .div1Register form button {
+    position: relative;
+  }
+  .containerRegister div h1 {
+    font-size: 18px;
+  }
+  .containerRegister div a {
+    font-size: 14px;
+  }
+}
+@media (max-width: 375px) {
+  .containerRegister {
+    justify-content: space-around;
+  }
+  .containerRegister .div1R.containerRegister {
+    height: 100vh;
+    flex: 50%;
+    justify-content: center;
+    align-items: center;
+  }
+  .containerRegister .div1R.containerRegister h1 {
+    font-size: 18px;
+  }
+  .containerRegister .div1R.containerRegister form input {
+    font-size: 11px;
+  }
+  .containerRegister .div1R.containerRegister form button {
+    position: relative;
+    font-size: 12px;
+  }
+  .containerRegister div {
+    gap: 0;
+  }
+  .containerRegister div h1 {
+    font-size: 16px;
+  }
+  .containerRegister div a {
+    font-size: 12px;
+  }
+}
+@media (max-width: 320px) {
+  .containerRegister {
+    justify-content: space-around;
+  }
+  .containerRegister .div1Register {
+    height: 100vh;
+    flex: 50%;
+    justify-content: center;
+    align-items: center;
+  }
+  .containerRegister .div1Register h1 {
+    font-size: 18px;
+  }
+  .containerRegister .div1Register form input {
+    font-size: 10px;
+  }
+  .containerRegister .div1Register form button {
+    position: relative;
+    font-size: 10px;
+  }
+  .containerRegister div {
+    gap: 0;
+  }
+  .containerRegister div h1 {
+    font-size: 16px;
+  }
+  .containerRegister div a {
+    font-size: 12px;
+  }
+}/*# sourceMappingURL=register.module.css.map */

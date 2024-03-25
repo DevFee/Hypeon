@@ -18,8 +18,8 @@ header {
   align-items: center;
   padding: 2rem;
   flex-flow: wrap;
-  -webkit-backdrop-filter: blur(20px);
-          backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
   width: 100%;
   gap: 1.5rem;
   z-index: 1;

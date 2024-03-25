@@ -1,4 +1,4 @@
-$bc: rgba(22, 22, 22, 0.301);
+$bc: rgb(22, 22, 22);
 $pctext: rgb(240, 240, 240);
 $pc1: #9932CC;
 $pc2: #ff00d9;
@@ -22,7 +22,7 @@ header{
     align-items: center;
     padding: 2rem;
     flex-flow: wrap;
-    backdrop-filter: blur(20px);
+    backdrop-filter: blur(10px);
     // background: $bc;
     width: 100%;
     gap: 1.5rem;
